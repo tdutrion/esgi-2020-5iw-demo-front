@@ -1,0 +1,14 @@
+image: node:14.5
+
+pages:
+  script:
+    - yarn install
+    - mkdir .public
+    - cp -r * .public
+    - mv .public public
+  artifacts:
+    paths:
+      - public
+  only:
+    - master
+
